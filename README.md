@@ -23,7 +23,8 @@ npm run dev
 All components are in `src/lib/components/ui/` and can be imported like this:
 
 ```svelte
-import {Button} from '$lib/components/ui/button'; import {Badge} from '$lib/components/ui/badge';
+import { Button } from '$lib/components/ui/button';
+import { Badge } from '$lib/components/ui/badge';
 ```
 
 Pre-installed components:
@@ -41,13 +42,14 @@ Pre-installed components:
 ### Quick Examples
 
 ```svelte
-<script>
+<script lang="ts>
 	import { Button } from '$lib/components/ui/button';
 	import { Badge } from '$lib/components/ui/badge';
 	import { toast } from 'svelte-sonner';
 </script>
 
-<Button on:click={() => toast.success('Hello!')}>Click me</Button>
+<Button onclick={() => toast('Hello!')}>Click me</Button>
+<Button onclick={() => toast.error('Not a real error!')}>Click me</Button>
 
 <Badge variant="secondary">New</Badge>
 ```
@@ -83,3 +85,4 @@ npm run lint         # Lint code
 - Responsive design ready
 - Accessible components
 - Production optimized
+- Easy paste CS from tweakCN
