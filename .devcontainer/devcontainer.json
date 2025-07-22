@@ -27,13 +27,5 @@
   },
 
   "postCreateCommand": "npm install",
-  "postStartCommand": "npm run dev",
-  
-  "forwardPorts": [4000],
-  "portsAttributes": {
-    "4000": {
-      "label": "SvelteKit Dev Server",
-      "onAutoForward": "notify"
-    }
-  }
+  "postStartCommand": "npm run dev"
 }
