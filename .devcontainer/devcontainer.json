@@ -1,0 +1,39 @@
+{
+  "name": "SvelteKit + ShadCN Svelte",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "emmet.includeLanguages": {
+          "svelte": "html"
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "npm install",
+  "postStartCommand": "npm run dev",
+  
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "SvelteKit Dev Server",
+      "onAutoForward": "notify"
+    }
+  }
+}
