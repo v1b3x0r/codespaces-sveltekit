@@ -1,9 +1,8 @@
 @import 'tailwindcss';
-
 @import 'tw-animate-css';
-
 @custom-variant dark (&:is(.dark *));
 
+/* TweakCN paste here START */
 :root {
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
@@ -110,18 +109,60 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 }
+/* TweakCN paste here END */
 
-@layer base {
-	* {
-		@apply border-border outline-ring/50;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
+/* Additional styles... svelte-motion etc */
+@theme inline {
 }
 
+/* Pre styles for typography */
 @layer component {
 	h1 {
 		@apply scroll-m-20 text-4xl font-extrabold tracking-tight text-balance;
+	}
+
+	h2 {
+		@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+	}
+
+	h3 {
+		@apply scroll-m-20 text-2xl font-semibold tracking-tight;
+	}
+
+	h4 {
+		@apply scroll-m-20 text-xl font-semibold tracking-tight;
+	}
+
+	h5 {
+		@apply scroll-m-20 text-lg font-semibold tracking-tight;
+	}
+
+	h6 {
+		@apply scroll-m-20 text-base font-semibold tracking-tight;
+	}
+
+	blockquote {
+		@apply border-l-2 italic;
+	}
+
+	code {
+		@apply rounded bg-muted px-1.5 py-0.5 font-mono text-sm font-semibold;
+	}
+
+	strong {
+		@apply font-semibold;
+	}
+
+	em {
+		@apply italic;
+	}
+}
+
+@layer base {
+	* {
+		@apply scroll-smooth border-border antialiased outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground;
 	}
 }

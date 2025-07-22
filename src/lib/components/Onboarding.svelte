@@ -208,7 +208,7 @@
 
 						<div class="space-y-3">
 							{#each method.steps as step, index}
-								<div class="flex items-start gap-3">
+								<div class="flex items-center gap-3">
 									<div
 										class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-xs font-semibold text-primary"
 									>
